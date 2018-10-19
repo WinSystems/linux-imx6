@@ -1,0 +1,5 @@
+#!/bin/sh
+module1="io60_dio48"
+
+# remove modules
+/sbin/modprobe -r $module1

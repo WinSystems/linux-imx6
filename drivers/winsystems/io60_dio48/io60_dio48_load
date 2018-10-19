@@ -1,0 +1,14 @@
+#!/bin/sh
+module="io60_dio48"
+device="io60_dio48"
+mode="666"
+
+# invoke modprobe with all arguments
+/sbin/modprobe $module
+
+# Create desired entry points
+# Add nodes as required in modprobe above
+rm -f /dev/${device}
+mknod /dev/${device} c 211 0
+
+chmod $mode  /dev/${device}

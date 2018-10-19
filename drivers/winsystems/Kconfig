@@ -1,0 +1,41 @@
+#
+# Custom Driver's menu configuration
+#
+menu "WinSystems Drivers"
+
+
+config MXC_WS_DRIVER
+        bool "WinSystems support drivers"
+        default y
+        ---help---
+        Support for WinSystems' drivers that are not fully compliant with MXC standard.
+
+config MXC_WS_IO60_DIO48_DRIVER
+       tristate "WinSystems IO60_DIO48 driver"
+       depends on MXC_WS_DRIVER
+       default n
+       ---help---
+       This is the IO60-DIO48 driver module. This module provides kernel API's for
+       the 48 I/O lines present on the IO60_DIO48 board.
+       If you want IO60_DIO48 driver support, you should say Y here
+
+config MXC_WS_IO60_COM4_DRIVER
+       tristate "WinSystems IO60_COM4 driver"
+       depends on MXC_WS_DRIVER
+       default n
+       ---help---
+       This is the IO60-COM4 driver module. This module provides kernel API's for
+       the quad UART IO60-COM4 board.
+       If you want IO60_COM4 driver support, you should say Y here
+
+config MXC_WS_IO60_SPI_DRIVER
+       tristate "WinSystems IO60-SPI driver"
+       depends on MXC_WS_DRIVER
+       default n
+       ---help---
+       This is the IO60-SPI driver module. This module provides simple IO
+       request methods for accessing the IO60 SPI devices from application
+       software.
+       If you want IO60 SPI driver support, you should say Y here
+
+endmenu

@@ -1,0 +1,24 @@
+From 0922491c6a9a136c3d1c0f1aea12fb6f0ccced2c Mon Sep 17 00:00:00 2001
+From: Paul DeMetrotion <pdemetrotion@winsystems.com>
+Date: Wed, 25 Jan 2017 09:47:04 -0600
+Subject: [PATCH] imx6q-c398 Add c398 device tree to Makefile
+
+---
+ arch/arm/boot/dts/Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
+index d4f292a..76adbba 100644
+--- a/arch/arm/boot/dts/Makefile
++++ b/arch/arm/boot/dts/Makefile
+@@ -287,6 +287,7 @@ dtb-$(CONFIG_SOC_IMX6Q) += \
+ 	imx6dl-wandboard-revb1.dtb \
+ 	imx6q-arm2.dtb \
+ 	imx6q-pop-arm2.dtb \
++	imx6q-c398.dtb \
+ 	imx6q-cm-fx6.dtb \
+ 	imx6q-cubox-i.dtb \
+ 	imx6q-dfi-fs700-m60.dtb \
+-- 
+1.9.1
+
