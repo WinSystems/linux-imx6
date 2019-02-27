@@ -220,11 +220,6 @@
     status = "okay";
 };
 
-&cpu0 {
-    arm-supply = <&sw1a_reg>;
-    soc-supply = <&sw1c_reg>;
-};
-
 &ecspi1 {
     fsl,spi-num-chipselects = <1>;
     cs-gpios = GP_SPI1_SS0;
@@ -884,6 +879,15 @@
 &sata {
     status = "okay";
 };
+
+&reg_arm {
+ vin-supply = <&sw1a_reg>;
+};
+
+&reg_soc {
+ vin-supply = <&sw1c_reg>;
+};
+
 
 &snvs_poweroff {
         status = "okay";
